@@ -123,7 +123,61 @@
 .feature-color{
     color: var(--orange);
 }
- /*------------------------------------------
+ /*----------------------------------------
         Main feature section styles end    
+ -----------------------------------------*/
+ /*------------------------------------------
+       Sub features section styles start    
+ -----------------------------------------*/
+ .sub-features-section{
+    display: flex;
+    gap: 54px;
+ }
+ .sub-features-text{
+    width: 45%;
+ }
+.sub-features-title{
+    border-left: 4px solid var(--orange);
+}
+.sub-features-title h1{
+    margin-left: 20px;
+}
+.sub-feature{
+    padding: 30px 33px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: .5px .5px 20px #e4e4e4d0;
+}
+.sub-feature p{
+    margin-top: 10px;
+}
+.sub-features-image{
+    overflow: hidden;
+    position: relative;   
+    width: 55%;
+}
+.sub-features-image img{
+    width: 95%;
+    height: 95%;
+    padding-left:40px; 
+    padding-bottom: 30px; 
+}
+
+.btn-experience span{
+    font-weight: 500;
+    font-size: 20px;
+}
+.btn-experience{
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 0.5;
+    position: absolute;
+    left:0px;
+    bottom:0px;
+    padding: 40px 30px;
+}
+
+ /*------------------------------------------
+      Sun features section styles end    
  -----------------------------------------*/
 
