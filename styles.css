@@ -1,0 +1,36 @@
+
+/*-----------------------
+     universal selector
+------------------------ */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*------------------------------------------
+        navigation section styles start    
+ -----------------------------------------*/
+ nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ nav > ul{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+ }
+
+/*------------------------------------------
+        navigation section styles end    
+ -----------------------------------------*/
+/*------------------------------------------
+        Banner section styles start    
+ -----------------------------------------*/
+ .banner-details{
+    
+ }
+/*------------------------------------------
+        Banner section styles end    
+ -----------------------------------------*/
+
