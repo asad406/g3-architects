@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
 
 *{
+    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
     font-family: 'Work Sans', sans-serif;
@@ -62,7 +63,7 @@
  -----------------------------------------*/
  nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 30px 20px;
  }
@@ -107,7 +108,7 @@
     display: flex;
     align-items: center;
     gap: 75px;
-    padding:0 70px;
+    /* padding:0 70px; */
     margin-top: 85px;
     margin-bottom: 130px;
 }
@@ -211,17 +212,22 @@
     text-align: center;
     border: 1px solid var(--orange);
     border-radius: 5px;
-    padding: 45px 45px;
-    width: 150px;
+    padding-top: 60px;
+  
     margin-bottom: 60px;
-    height: 150px;
+    height: 240px;
+    width: 240px;
+
 }
 
  /*------------------------------------------
       Facts section styles end    
  -----------------------------------------*/
+ /*------------------------------------------
+      appointment section styles start    
+ -----------------------------------------*/
  .appointment-section{
-    width: 75%;
+    width: 80%;
     padding: 15px;
     background-color: var(--orange);
     display: flex;
@@ -237,7 +243,8 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    border-right: 2px solid var(--primary-color);
+    width: 27%;
+    /* border-right: 2px solid var(--primary-color); */
 }
 .appointment-logo{
     width:100px;
@@ -245,12 +252,15 @@
 }
 .apointment-descript p{
     margin-left: 20px;
-    width: 80%;
+    width: 70%;
 }
 .appointment-button button{
     background-color: var(--secondary-color);
     color:var(--orange);
 }
+/*------------------------------------------
+      appointment section styles end    
+ -----------------------------------------*/
  /*------------------------------------------
       Sponsor section styles start    
  -----------------------------------------*/
@@ -286,3 +296,88 @@
   /*------------------------------------------
       Footer section styles end    
  -----------------------------------------*/
+
+    /*------------------
+         media quires 
+    ------------------- */
+
+    @media only screen and (max-width:567px) {
+       
+        body{
+           margin: 20px;
+        }
+        .description-width{
+            width: 100%;
+        }
+        .nav-section, .banner-section{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .banner-title{
+            font-weight: 600;
+            font-size: 45px;
+            color: var(--black)
+         }
+        .main-feature-section{
+            flex-direction: column;
+           
+        }
+        .main-feature-image{
+            grid-template-columns: repeat(1,1fr);
+            width: 100%;
+            
+            
+        }
+        .main-feature{
+            width: 100%;       
+           
+        }
+        .sub-features-section{
+            flex-direction: column;
+        }
+        .sub-features-text{
+            width: 100%;
+           
+        }
+        .sub-features-image{
+            width: 100%;
+            padding: 0px;
+        }
+        .btn-experience{
+            position: relative;
+            
+        }
+        .facts-items{
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .fact-item{
+            height: 240px;
+            width: 240px;
+            padding-top: 60px;
+        }
+        
+        .appointment-section{
+            /* display: none; */
+            flex-direction: column;
+            text-align: center;
+        }
+        .contact{
+            /* display: block; */
+            flex-direction: column;
+        }
+        .apointment-descript p{
+            /* display: none; */
+        }
+        .sponsors{
+            flex-direction: column;
+            gap: 50px;
+        }
+        .footer-section{
+            width: 100%;
+        }
+
+    }
