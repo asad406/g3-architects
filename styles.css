@@ -8,7 +8,9 @@
 *{
     box-sizing: border-box;
     margin: 0px;
-    padding: 0px;
+    padding: 0px;    
+}
+body{
     font-family: 'Work Sans', sans-serif;
 }
 :root{
@@ -63,7 +65,7 @@
  -----------------------------------------*/
  nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 30px 20px;
  }
@@ -85,6 +87,7 @@
  -----------------------------------------*/
  .banner-details{
     text-align: center;
+    padding-top: 80px;
  }
 
  .banner-title{
@@ -95,8 +98,7 @@
  .banner-image img{
     width: 100%;
     height: 100%;
-    margin:30px 0px;
-    
+    margin:30px 0px;    
  }
 /*------------------------------------------
         Banner section styles end    
@@ -189,8 +191,6 @@
       Sub features section styles end    
  -----------------------------------------*/
 
-
- 
  /*------------------------------------------
       Facts section styles start    
  -----------------------------------------*/
@@ -206,19 +206,32 @@
     display: flex;
     justify-content: space-around;
 }
-
-.fact-item{
-    
+.fact-item{    
     text-align: center;
     border: 1px solid var(--orange);
     border-radius: 5px;
-    padding-top: 60px;
-  
+    padding-top: 60px;  
     margin-bottom: 60px;
     height: 240px;
     width: 240px;
-
 }
+.fact-item:hover {    
+    animation: background-animation 2s linear infinite;
+    animation-play-state: running;
+}
+
+@keyframes background-animation {
+    0% {
+      background-color: red;
+    }
+    50% {
+      background-color: green;
+    }
+    100% {
+      background-color: rgb(0, 102, 255);
+    }
+}
+  
 
  /*------------------------------------------
       Facts section styles end    
@@ -226,7 +239,7 @@
  /*------------------------------------------
       appointment section styles start    
  -----------------------------------------*/
- .appointment-section{
+.appointment-section{
     width: 80%;
     padding: 15px;
     background-color: var(--orange);
@@ -244,7 +257,6 @@
     align-items: center;
     padding: 10px;
     width: 27%;
-    /* border-right: 2px solid var(--primary-color); */
 }
 .appointment-logo{
     width:100px;
@@ -264,22 +276,22 @@
  /*------------------------------------------
       Sponsor section styles start    
  -----------------------------------------*/
- .sponsor-section {
+.sponsor-section {
     margin-top: 80px;
     margin-bottom: 80px;
- }
- .sponsor-details{
+}
+.sponsor-details{
     text-align: center;  
- }
- .sponsors{
+}
+.sponsors{
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-top: 50px;
- }
- .sponsor-logo img{
+}
+.sponsor-logo img{
     filter: grayscale(1);
- }
+}
  /*------------------------------------------
       Sponsor section styles end    
  -----------------------------------------*/
@@ -287,12 +299,12 @@
   /*------------------------------------------
       Footer section styles start    
  -----------------------------------------*/
- .footer-section{
+.footer-section{
     text-align: center;
     background-color: var(--primary-color);
     padding: 20px 0px;
     margin-bottom: 60px;
- }
+}
   /*------------------------------------------
       Footer section styles end    
  -----------------------------------------*/
@@ -301,83 +313,97 @@
          media quires 
     ------------------- */
 
-    @media only screen and (max-width:567px) {
-       
-        body{
-           margin: 20px;
-        }
-        .description-width{
-            width: 100%;
-        }
-        .nav-section, .banner-section{
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-
-        .banner-title{
-            font-weight: 600;
-            font-size: 45px;
-            color: var(--black)
-         }
-        .main-feature-section{
-            flex-direction: column;
-           
-        }
-        .main-feature-image{
-            grid-template-columns: repeat(1,1fr);
-            width: 100%;
-            
-            
-        }
-        .main-feature{
-            width: 100%;       
-           
-        }
-        .sub-features-section{
-            flex-direction: column;
-        }
-        .sub-features-text{
-            width: 100%;
-           
-        }
-        .sub-features-image{
-            width: 100%;
-            padding: 0px;
-        }
-        .btn-experience{
-            position: relative;
-            
-        }
-        .facts-items{
-            flex-direction: column;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-        }
-        .fact-item{
-            height: 240px;
-            width: 240px;
-            padding-top: 60px;
-        }
-        
-        .appointment-section{
-            /* display: none; */
-            flex-direction: column;
-            text-align: center;
-        }
-        .contact{
-            /* display: block; */
-            flex-direction: column;
-        }
-        .apointment-descript p{
-            /* display: none; */
-        }
-        .sponsors{
-            flex-direction: column;
-            gap: 50px;
-        }
-        .footer-section{
-            width: 100%;
-        }
-
+@media only screen and (max-width:567px) {
+    
+    body{
+        margin: 20px;
     }
+
+    .description-width{
+        width: 100%;
+    }
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+        gap:10px;        
+    }
+    nav> ul{
+        flex-direction: column;        
+    }
+    .nav-section, .banner-section{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .banner-details{          
+        padding-top: 10px;
+    }
+
+    .banner-title{
+        font-weight: 600;
+        font-size: 45px;
+        color: var(--black)
+    }
+    .main-feature-section{
+        flex-direction: column;
+    }
+    .main-feature-image{
+        grid-template-columns: repeat(1,1fr);
+        width: 100%;        
+    }
+    .main-feature{
+        width: 100%;       
+        
+    }
+    .sub-features-section{
+        flex-direction: column;
+    }
+    .sub-features-text{
+        width: 100%;        
+    }
+    .sub-features-image{
+        width: 100%;
+        padding: 0px;
+    }
+    .btn-experience{
+        position: relative;        
+    }
+    .facts-items{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .fact-item{
+        height: 240px;
+        width: 240px;
+        padding-top: 60px;
+    }
+    .appointment-section{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .contact{                   
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .apointment-descript p{
+        margin: 10px auto;
+        text-align: center;
+    }
+            
+    .sponsors{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .footer-section{
+        width: 100%;
+    }
+    
+    
+    
+}
+
+
+   
