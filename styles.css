@@ -2,9 +2,13 @@
 /*-----------------------
      universal selectors.
 ------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
+    font-family: 'Work Sans', sans-serif;
 }
 :root{
     --black:#131313;
@@ -36,8 +40,12 @@
     font-size: 16px;
     color: var(--light-gray);
     margin-top: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 30px;    
 }
+.description-width{
+    width: 550px;
+    margin:30px auto;
+ }
 .btn{
     font-weight: 600;
     font-size: 20px;
@@ -76,8 +84,8 @@
  -----------------------------------------*/
  .banner-details{
     text-align: center;
-
  }
+
  .banner-title{
     font-weight: 700;
     font-size: 65px;
@@ -85,7 +93,6 @@
  }
  .banner-image img{
     width: 100%;
-    /* max-width: 1440px; */
     height: 100%;
     margin:30px 0px;
     
@@ -178,6 +185,104 @@
 }
 
  /*------------------------------------------
-      Sun features section styles end    
+      Sub features section styles end    
  -----------------------------------------*/
 
+
+ 
+ /*------------------------------------------
+      Facts section styles start    
+ -----------------------------------------*/
+
+.facts-details{
+    max-width: 550px;
+    margin: 80px 0px;   
+}
+.fact-item h1{
+    padding: 10px;
+}
+.facts-items{
+    display: flex;
+    justify-content: space-around;
+}
+
+.fact-item{
+    
+    text-align: center;
+    border: 1px solid var(--orange);
+    border-radius: 5px;
+    padding: 45px 45px;
+    width: 150px;
+    margin-bottom: 60px;
+    height: 150px;
+}
+
+ /*------------------------------------------
+      Facts section styles end    
+ -----------------------------------------*/
+ .appointment-section{
+    width: 75%;
+    padding: 15px;
+    background-color: var(--orange);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: auto;
+    border-radius: 15px;
+    margin-top:80px;
+    color: white;
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-right: 2px solid var(--primary-color);
+}
+.appointment-logo{
+    width:100px;
+    padding: 15px;
+}
+.apointment-descript p{
+    margin-left: 20px;
+    width: 80%;
+}
+.appointment-button button{
+    background-color: var(--secondary-color);
+    color:var(--orange);
+}
+ /*------------------------------------------
+      Sponsor section styles start    
+ -----------------------------------------*/
+ .sponsor-section {
+    margin-top: 80px;
+    margin-bottom: 80px;
+ }
+ .sponsor-details{
+    text-align: center;  
+ }
+ .sponsors{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+ }
+ .sponsor-logo img{
+    filter: grayscale(1);
+ }
+ /*------------------------------------------
+      Sponsor section styles end    
+ -----------------------------------------*/
+
+  /*------------------------------------------
+      Footer section styles start    
+ -----------------------------------------*/
+ .footer-section{
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 20px 0px;
+    margin-bottom: 60px;
+ }
+  /*------------------------------------------
+      Footer section styles end    
+ -----------------------------------------*/
